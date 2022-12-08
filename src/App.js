@@ -1,23 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import { Typewriter } from 'react-simple-typewriter';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hello</h1>
+      <button type="button" class="btn btn-primary">Primary</button>
+      <h2>Hello i am a <span className='text-primary'><Typewriter
+        words={['Eat', 'Sleep', 'Code', 'Repeat!']}
+        loop={false}
+        cursor
+        cursorStyle='_'
+        typeSpeed={70}
+        deleteSpeed={50}
+        delaySpeed={1000}
+      /></span></h2>
     </div>
   );
 }
