@@ -101,7 +101,7 @@ const CommonComponent = () => {
                   </a>
                 </li>
               </ul>
-              <div>
+              {/* <div>
                 <h3 className="text-white flex justify-between items-center gap-4 my-5 font-semibold">
                   Hire me <img src={Line} alt="line" className="w-8/12 h-7" />
                 </h3>
@@ -117,7 +117,7 @@ const CommonComponent = () => {
                     </a>
                   </li>
                 </ul>
-              </div>
+              </div> */}
               <div>
                 <h3 className="text-white flex items-center gap-4 my-5 font-semibold">
                   Contact <img src={Line} alt="line" className="w-full h-7" />

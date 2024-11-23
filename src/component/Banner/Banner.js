@@ -113,7 +113,7 @@ const Banner = () => {
                 <div className="logo-right flex items-center sm:gap-6 gap-2 justify-end">
                   <a
                     target="_blank"
-                    href="https://drive.google.com/file/d/1UszVZuPHUZcqpbqF75LofTtrZqzwzPNb/view?usp=share_link"
+                    href="https://drive.google.com/file/d/1pykTYwl7exOiLEuVi539xsQ0p407r4u2/view?usp=sharing"
                   >
                     <button className="btn btn-success w-36 btn-square  mb-0">
                       Preview resume

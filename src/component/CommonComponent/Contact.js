@@ -19,11 +19,11 @@ const Contact = () => {
       </h4> */}
       <h4 className="text-gray-400 mb-5">
         <a
-          href="https://www.linkedin.com/in/aremon/"
+          href="https://www.linkedin.com/in/aremon8685/"
           target="__blank"
           className="flex items-center gap-5 justify-start "
         >
-          <img src={Linkedin} alt="Linkedin icon" /> <span>/in/aremon/</span>
+          <img src={Linkedin} alt="Linkedin icon" /> <span>/in/aremon8685/</span>
         </a>
       </h4>
       <h4 className="text-gray-400 mb-5">

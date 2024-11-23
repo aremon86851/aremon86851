@@ -36,11 +36,11 @@ const Project = () => {
                     <h2 className="text-3xl text-white font-semibold mt-3 mb-2">
                       Luxury Hunt
                     </h2>
-                    <Link to="/luxury">
+                    {/* <Link to="/luxury">
                       <button className="btn btn-sm mr-2 text-white w-full">
                         View details
                       </button>
-                    </Link>
+                    </Link> */}
                   </div>
                   <div className="flex justify-end">
                     <p className="text-right italic w-80">
@@ -109,11 +109,11 @@ const Project = () => {
                     <h2 className="text-3xl text-white font-semibold mt-3 mb-2">
                       Box Studio
                     </h2>
-                    <Link to="/boxstudio">
+                    {/* <Link to="/boxstudio">
                       <button className="btn btn-sm mr-2 text-white">
                         View details
                       </button>
-                    </Link>
+                    </Link> */}
                   </div>
                   <div className="flex justify-end">
                     <p className="text-right italic w-80">
@@ -185,11 +185,11 @@ const Project = () => {
                     <h2 className="text-3xl text-white font-semibold mt-3 mb-2">
                       Edu tech
                     </h2>
-                    <Link to="/edutech">
+                    {/* <Link to="/edutech">
                       <button className="btn btn-sm mr-2 text-white">
                         View details
                       </button>
-                    </Link>
+                    </Link> */}
                   </div>
                   <div className="flex justify-end">
                     <p className="text-right italic w-80">
