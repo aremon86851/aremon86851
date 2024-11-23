@@ -1,0 +1,65 @@
+/* font-family: 'Source Sans Pro', sans-serif; */
+.skills-container {
+  gap: 15px;
+}
+
+.skills-container > .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* width: 300px; */
+  padding: 30px 20px;
+  border: 1px solid #ccc;
+  margin: 10px;
+  text-align: center;
+  background: white;
+  box-shadow: 0px 0px 18px gray;
+  height: 330px;
+}
+
+.skills-container > .card > .card-image {
+  width: 74px;
+  height: auto;
+}
+
+.skills-container > .card > .card-heading {
+  margin: 15px 0;
+  color: black;
+  font-family: "Oswald", sans-serif;
+  font-size: 28px;
+}
+
+.skills-container > .card > .card-details {
+  margin-top: auto;
+  color: black;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+}
+
+.skills-container > .card:hover {
+  background: black;
+  color: white;
+  box-shadow: 0 0 10px black;
+  border: 0;
+}
+
+.skills-container > .card:hover .card-heading {
+  color: white;
+}
+
+.skills-container > .card:hover .card-details {
+  color: white;
+}
+
+@media screen and (max-width: 1023px) {
+  .skills-container > .card {
+    height: 100%;
+  }
+
+  .skills-container > .card > .card-heading {
+    margin: 2px 0;
+  }
+  .skills-container > .card > .card-details {
+    margin-top: 0px;
+  }
+}
