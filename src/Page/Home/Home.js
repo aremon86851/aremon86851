@@ -1,11 +1,6 @@
 import React from "react";
-import AboutMe from "../../component/AboutMe/AboutMe";
 import Banner from "../../component/Banner/Banner";
-import Contact from "../../component/Contact/Contact";
 import Footer from "../../component/Footer/Footer";
-import Project from "../../component/Project/Project";
-import Projects from "../../layout/Projects";
-import Skills from "../../component/Skills/Skills";
 import CommonComponent from "../../component/CommonComponent/CommonComponent";
 
 const Home = () => {

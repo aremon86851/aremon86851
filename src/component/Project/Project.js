@@ -3,7 +3,6 @@ import Heading from "../Heading/Heading";
 import img1 from "../../assest/luxury-hunt.png";
 import img2 from "../../assest/BoxStudio.png";
 import img3 from "../../assest/EduTech.png";
-import { Link } from "react-router-dom";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
 import "./project.css";
@@ -13,6 +12,7 @@ const Project = () => {
     <div className="my-10" id="projects">
       <div>
         <Heading>Projects...</Heading>
+        <p className="text-left mb-3 text-red-400 italic">For more you can check my github account. <a className="text-blue-400 underline" href="https://github.com/aremon86851?tab=repositories">Github</a></p>
         <div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mx-2 md:mx-10 lg:mx-0">
             <div

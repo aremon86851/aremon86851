@@ -14,6 +14,7 @@ import woocommerceIcon from "../../assest/woocommerce.png";
 import choromeDevIcon from "../../assest/chorome-dev.png";
 import vsCodeIcon from "../../assest/visual-studio.png";
 import wordpressIcon from "../../assest/wordpress.png";
+import moreIcon from "../../assest/more.svg";
 import "./skills.css";
 
 const Skills = () => {
@@ -116,6 +117,14 @@ const Skills = () => {
         "Html is piller of all website. When we know how to handle a html file then we can optimized our website greately and we can link some of uniqueness",
       animationType: "fade-down",
     },
+    {
+      icon: moreIcon,
+      name:"More...",
+      details:
+        "Html is piller of all website. When we know how to handle a html file then we can optimized our website greately and we can link some of uniqueness",
+      animationType: "fade-down",
+      link: "https://www.linkedin.com/in/aremon8685/details/skills/"
+    },
   ];
   return (
     <>
@@ -126,11 +135,12 @@ const Skills = () => {
       >
         {skillsArray ? (
           <>
-            {skillsArray?.map((skill) => (
+            {skillsArray?.map((skill,i) => (
               <>
+              <a href={skill?.link}>
                 <div
                   // data-aos={skill?.animationType}
-                  className="card"
+                  className={`card`}
                 >
                   <img
                     src={skill?.icon}
@@ -141,9 +151,13 @@ const Skills = () => {
                         : "card-image"
                     }`}
                   />
-                  <h2 className="card-heading">{skill?.name}</h2>
+                  {
+                    skill?.name && <h2 className="card-heading">{skill.name}</h2>
+                  }
+                  
                   {/* <p className="card-details">{skill?.details}</p> */}
                 </div>
+              </a>
               </>
             ))}
           </>
