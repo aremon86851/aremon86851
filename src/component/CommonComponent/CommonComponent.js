@@ -1,15 +1,14 @@
-import React from "react";
-import Skills from "../Skills/Skills";
-import Project from "../Project/Project";
+import React, { useState } from "react";
 import Line from "../../assest/line.png";
 import Contact from "./Contact";
-import Experience from "../Experiences/Experience";
 import CodingImg from "../../assest/coding.png";
 import SkillsImg from "../../assest/skills.png";
 import ToolsImg from "../../assest/tools.png";
 import ProjectImg from "../../assest/projects.png";
 import ExperienceImg from "../../assest/experience.png";
+import TabControl from "../TabControl";
 const CommonComponent = () => {
+  const [activeTab, setActiveTab] = useState('skills');
   return (
     <section className="common-component md:pt-14 pt-6 xl:px-20 lg:px-10 relative">
       <div className="lg:flex block gap-6 ">
@@ -35,7 +34,7 @@ const CommonComponent = () => {
               </p>
             </div>
             <div className="lg:hidden block">
-              <div className="btm-nav bg-transparent z-50">
+              {/* <div className="btm-nav bg-transparent z-50">
                 <button
                   className="rounded-none bg-[#570DF8]"
                   style={{ borderRight: " 2px solid rgb(63 81 135 / 37%)" }}
@@ -68,7 +67,7 @@ const CommonComponent = () => {
                     <img src={ExperienceImg} className="w-6" alt="" />
                   </a>
                 </button>
-              </div>
+              </div> */}
             </div>
             <div className="lg:hidden block">
               <h3 className="text-white flex items-center gap-4 my-5 font-semibold">
@@ -81,24 +80,24 @@ const CommonComponent = () => {
             <div>
               <ul className="flex flex-col text-left rounded-box pl-2 mt-0">
                 <li className="text-gray-300 text-base mb-2">
-                  <a href="#skills" className="pl-0  pb-4">
+                  <p onClick={()=> setActiveTab("skills")} className="pl-0  pb-0">
                     Skills
+                  </p>
+                </li>
+                <li className="text-gray-300 text-base mb-2">
+                  <a href="#tools" className="pl-0 pb-0">
+                    Tools <span className="text-xs text-gray-400">{`(coming soon...)`}</span>
                   </a>
                 </li>
                 <li className="text-gray-300 text-base mb-2">
-                  <a href="#tools" className="pl-0  pb-4">
-                    Tools
-                  </a>
-                </li>
-                <li className="text-gray-300 text-base mb-2">
-                  <a href="#projects" className="pl-0  pb-4">
+                  <p onClick={()=> setActiveTab("projects")} className="pl-0  pb-0">
                     Projects
-                  </a>
+                  </p>
                 </li>
                 <li className="text-gray-300 text-base mb-2">
-                  <a href="#experience" className="pl-0  pb-4">
-                    Experience
-                  </a>
+                  <p onClick={()=> setActiveTab("experiences")} className="pl-0  pb-0">
+                    Experiences
+                  </p>
                 </li>
               </ul>
               {/* <div>
@@ -128,10 +127,8 @@ const CommonComponent = () => {
             <img src={CodingImg} alt="coding" />
           </div>
         </div>
-        <div className="common-component-right lg:px-0 px-4">
-          <Skills />
-          <Project />
-          <Experience />
+        <div className="common-component-right lg:px-0 px-4 w-full">
+          <TabControl activeTab={activeTab} setActiveTab={setActiveTab}/>
         </div>
       </div>
     </section>

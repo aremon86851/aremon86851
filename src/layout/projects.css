@@ -1,4 +1,4 @@
-*,
+/* *,
 ::before,
 ::after {
     box-sizing: border-box;
@@ -93,4 +93,4 @@ button {
 
 .active-content {
     display: block;
-}
+} */

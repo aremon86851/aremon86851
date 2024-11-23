@@ -121,7 +121,7 @@ const Skills = () => {
     <>
       <Heading>Skills...</Heading>
       <div
-        className="skills-container grid xl:grid-cols-3 md:grid-cols-2 gap-4 items-center"
+        className="skills-container grid xl:grid-cols-3 sm:grid-cols-2 gap-4 items-center"
         id="skills"
       >
         {skillsArray ? (
@@ -142,7 +142,7 @@ const Skills = () => {
                     }`}
                   />
                   <h2 className="card-heading">{skill?.name}</h2>
-                  <p className="card-details">{skill?.details}</p>
+                  {/* <p className="card-details">{skill?.details}</p> */}
                 </div>
               </>
             ))}

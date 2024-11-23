@@ -8,25 +8,28 @@
   flex-direction: column;
   align-items: center;
   /* width: 300px; */
-  padding: 30px 20px;
+  padding: 20px 20px;
   border: 1px solid #ccc;
-  margin: 10px;
+  /* margin: 10px; */
   text-align: center;
   background: white;
   box-shadow: 0px 0px 18px gray;
-  height: 330px;
+  /* height: 330px; */
+  min-height: 100%;
+  justify-content: space-between;
 }
 
 .skills-container > .card > .card-image {
-  width: 74px;
-  height: auto;
+  width: 400px;
+  height: 40px;
+  object-fit: contain;
 }
 
 .skills-container > .card > .card-heading {
-  margin: 15px 0;
+  margin: 10px 0 0 0;
   color: black;
   font-family: "Oswald", sans-serif;
-  font-size: 28px;
+  font-size: 24px;
 }
 
 .skills-container > .card > .card-details {
@@ -37,15 +40,14 @@
 }
 
 .skills-container > .card:hover {
-  background: black;
-  color: white;
+  background: #e9e9e9;
   box-shadow: 0 0 10px black;
   border: 0;
 }
 
-.skills-container > .card:hover .card-heading {
+/* .skills-container > .card:hover .card-heading {
   color: white;
-}
+} */
 
 .skills-container > .card:hover .card-details {
   color: white;
