@@ -1,135 +1,104 @@
 import React, { useState } from "react";
-import Line from "../../assest/line.png";
 import Contact from "./Contact";
 import CodingImg from "../../assest/coding.png";
-import SkillsImg from "../../assest/skills.png";
-import ToolsImg from "../../assest/tools.png";
-import ProjectImg from "../../assest/projects.png";
-import ExperienceImg from "../../assest/experience.png";
 import TabControl from "../TabControl";
+
+const glass = {
+  background: "rgba(255,255,255,0.04)",
+  backdropFilter: "blur(14px)",
+  WebkitBackdropFilter: "blur(14px)",
+  border: "1px solid rgba(255,255,255,0.08)",
+  borderRadius: "16px",
+};
+
+const Label = ({ text }) => (
+  <p style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#22d3ee", marginBottom: "8px" }}>
+    {text}
+  </p>
+);
+
+const NavBtn = ({ label, active, onClick, badge }) => (
+  <button
+    onClick={onClick}
+    style={{
+      width: "100%", textAlign: "left", display: "flex", alignItems: "center", gap: "8px",
+      padding: "8px 10px", borderRadius: "8px",
+      fontSize: "13px", fontWeight: active ? 600 : 400,
+      color: active ? "#22d3ee" : "#94a3b8",
+      background: active ? "rgba(34,211,238,0.08)" : "transparent",
+      borderLeft: active ? "2px solid #22d3ee" : "2px solid transparent",
+      transition: "all 0.2s ease", cursor: "pointer", border: "none", outline: "none",
+    }}
+    onMouseEnter={e => { if (!active) { e.currentTarget.style.color = "#e2e8f0"; e.currentTarget.style.background = "rgba(255,255,255,0.04)"; } }}
+    onMouseLeave={e => { if (!active) { e.currentTarget.style.color = "#94a3b8"; e.currentTarget.style.background = "transparent"; } }}
+  >
+    {label}
+    {badge && <span style={{ fontSize: "10px", color: "#475569", marginLeft: "4px" }}>{badge}</span>}
+  </button>
+);
+
 const CommonComponent = () => {
-  const [activeTab, setActiveTab] = useState('skills');
+  const [activeTab, setActiveTab] = useState("skills");
+
   return (
-    <section className="common-component md:pt-14 pt-6 xl:px-20 lg:px-10 relative">
-      <div className="lg:flex block gap-6 ">
-        <div className="common-component-left ">
-          <div className="bg-gray-800 p-6 rounded-lg xl:w-80 lg:w-72 mb-6 md:mx-0 mx-4">
-            <h3 className="text-white text-center mx-auto w-10/12">
-              {" "}
-              Hey, Welcome to my portfolio<span>🖐</span>
-            </h3>
-            <div>
-              <h3 className="text-white flex items-center gap-4 my-5 font-semibold">
-                Brief <img src={Line} alt="line" className="w-full h-7" />
-              </h3>
-              <p className="text-gray-400 text-left">
-                I work as a software engineer at Coderower, where I contribute
-                to the development of various software projects.
-              </p>
-              <p className="text-gray-400 text-left">
-                Additionally, I am a freelance frontend developer, specializing
-                in creating responsive and user-friendly web interfaces. My role
-                involves designing and implementing visually appealing websites
-                and web applications, ensuring a seamless user experience
+    <section className="md:pt-14 pt-6 xl:px-20 lg:px-10 relative pb-8">
+      <div className="lg:flex block gap-6">
+
+        {/* ── Sidebar ── */}
+        <div className="flex-shrink-0">
+
+          {/* Welcome card — always visible */}
+          <div style={{ ...glass, padding: "20px", marginBottom: "14px" }} className="xl:w-80 lg:w-72 md:mx-0 mx-4">
+            <p style={{ color: "#e2e8f0", fontSize: "13px", fontWeight: 500, textAlign: "center", marginBottom: "14px" }}>
+              Hey, Welcome to my portfolio 🖐
+            </p>
+            <div style={{ borderTop: "1px solid rgba(255,255,255,0.07)", paddingTop: "12px" }}>
+              <Label text="About" />
+              <p style={{ color: "#64748b", fontSize: "12px", lineHeight: "1.7", textAlign: "left" }}>
+                Full-Stack developer with <span style={{ color: "#94a3b8", fontWeight: 600 }}>3+ years</span> building
+                React/Next.js frontends and Node.js backends. Active SaaS builder with live products.
+                Based in <span style={{ color: "#94a3b8" }}>Gazipur, Bangladesh</span>.
               </p>
             </div>
-            <div className="lg:hidden block">
-              {/* <div className="btm-nav bg-transparent z-50">
-                <button
-                  className="rounded-none bg-[#570DF8]"
-                  style={{ borderRight: " 2px solid rgb(63 81 135 / 37%)" }}
-                >
-                  <a href="#skills">
-                    <img src={SkillsImg} className="w-6" alt="" />
-                  </a>
-                </button>
-                <button
-                  className="rounded-none bg-[#570DF8]"
-                  style={{ borderRight: " 2px solid rgb(63 81 135 / 37%)" }}
-                >
-                  <a href="#tools">
-                    <img src={ToolsImg} className="w-6" alt="" />
-                  </a>
-                </button>
-                <button
-                  className="rounded-none bg-[#570DF8]"
-                  style={{ borderRight: " 2px solid rgb(63 81 135 / 37%)" }}
-                >
-                  <a href="#projects">
-                    <img src={ProjectImg} className="w-6" alt="" />
-                  </a>
-                </button>
-                <button
-                  className="rounded-none bg-[#570DF8]"
-                  style={{ borderRight: " 2px solid rgb(63 81 135 / 37%)" }}
-                >
-                  <a href="#experience">
-                    <img src={ExperienceImg} className="w-6" alt="" />
-                  </a>
-                </button>
-              </div> */}
-            </div>
-            <div className="lg:hidden block">
-              <h3 className="text-white flex items-center gap-4 my-5 font-semibold">
-                Contact <img src={Line} alt="line" className="w-full h-7" />
-              </h3>
+            {/* Contact — mobile only */}
+            <div className="lg:hidden block" style={{ borderTop: "1px solid rgba(255,255,255,0.07)", marginTop: "14px", paddingTop: "12px" }}>
+              <Label text="Contact" />
               <Contact />
             </div>
           </div>
-          <div className="bg-gray-800 p-6 rounded-lg xl:w-80 lg:w-72 sticky top-1 h-screen lg:flex flex-col justify-between  hidden">
+
+          {/* Sticky nav — desktop only */}
+          <div
+            style={{ ...glass, padding: "20px", position: "sticky", top: "12px" }}
+            className="xl:w-80 lg:w-72 lg:flex flex-col justify-between hidden"
+          >
             <div>
-              <ul className="flex flex-col text-left rounded-box pl-2 mt-0">
-                <li className="text-gray-300 text-base mb-2">
-                  <p onClick={()=> setActiveTab("skills")} className="pl-0  pb-0">
-                    Skills
-                  </p>
-                </li>
-                <li className="text-gray-300 text-base mb-2">
-                  <a href="#tools" className="pl-0 pb-0">
-                    Tools <span className="text-xs text-gray-400">{`(coming soon...)`}</span>
-                  </a>
-                </li>
-                <li className="text-gray-300 text-base mb-2">
-                  <p onClick={()=> setActiveTab("projects")} className="pl-0  pb-0">
-                    Projects
-                  </p>
-                </li>
-                <li className="text-gray-300 text-base mb-2">
-                  <p onClick={()=> setActiveTab("experiences")} className="pl-0  pb-0">
-                    Experiences
-                  </p>
-                </li>
-              </ul>
-              {/* <div>
-                <h3 className="text-white flex justify-between items-center gap-4 my-5 font-semibold">
-                  Hire me <img src={Line} alt="line" className="w-8/12 h-7" />
-                </h3>
-                <ul className="flex flex-col text-left rounded-box pl-2 mt-0">
-                  <li className="text-gray-300 text-base mb-2">
-                    <a href="#skills" className="pl-0  pb-4">
-                      As a Employee...
-                    </a>
-                  </li>
-                  <li className="text-gray-300 text-base mb-2">
-                    <a href="#tools" className="pl-0  pb-4">
-                      As a Freelancer...
-                    </a>
-                  </li>
-                </ul>
-              </div> */}
-              <div>
-                <h3 className="text-white flex items-center gap-4 my-5 font-semibold">
-                  Contact <img src={Line} alt="line" className="w-full h-7" />
-                </h3>
+              <Label text="Navigate" />
+              <div className="flex flex-col gap-1 mb-5">
+                <NavBtn label="Skills"      active={activeTab === "skills"}      onClick={() => setActiveTab("skills")} />
+                <NavBtn label="Projects"    active={activeTab === "projects"}    onClick={() => setActiveTab("projects")} />
+                <NavBtn label="Experience"  active={activeTab === "experience"}  onClick={() => setActiveTab("experience")} />
+                <NavBtn label="Education"   active={activeTab === "education"}   onClick={() => setActiveTab("education")} />
+              </div>
+              <div style={{ borderTop: "1px solid rgba(255,255,255,0.07)", paddingTop: "12px" }}>
+                <Label text="Contact" />
                 <Contact />
               </div>
             </div>
-            <img src={CodingImg} alt="coding" />
+            <img
+              src={CodingImg}
+              alt=""
+              style={{ width: "100%", opacity: 0.45, marginTop: "20px", filter: "drop-shadow(0 0 14px rgba(34,211,238,0.1))" }}
+              loading="lazy"
+            />
           </div>
         </div>
-        <div className="common-component-right lg:px-0 px-4 w-full">
-          <TabControl activeTab={activeTab} setActiveTab={setActiveTab}/>
+
+        {/* ── Main content ── */}
+        <div className="lg:px-0 px-4 w-full min-w-0">
+          <TabControl activeTab={activeTab} setActiveTab={setActiveTab} />
         </div>
+
       </div>
     </section>
   );

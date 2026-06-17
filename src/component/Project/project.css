@@ -1,3 +1,166 @@
-.single-project {
-  background: #373737;
+/* ── Shared card base ── */
+.proj-card {
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: all 0.32s ease;
+  display: flex;
+  flex-direction: column;
 }
+.proj-card:hover {
+  border-color: rgba(34,211,238,0.32);
+  box-shadow: 0 0 32px rgba(34,211,238,0.09), 0 16px 40px rgba(0,0,0,0.3);
+  transform: translateY(-4px);
+}
+
+/* ── Featured card (Scanalyzr) ── */
+.proj-card-featured {
+  border-color: rgba(34,211,238,0.18);
+}
+.proj-card-featured:hover {
+  border-color: rgba(34,211,238,0.45);
+  box-shadow: 0 0 50px rgba(34,211,238,0.13), 0 20px 50px rgba(0,0,0,0.35);
+}
+
+/* ── Thumbnail ── */
+.proj-thumb-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.proj-thumb-wrapper img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.proj-card:hover .proj-thumb-wrapper img { transform: scale(1.04); }
+
+/* Gradient placeholder for projects without a screenshot */
+.proj-thumb-placeholder {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.04em;
+}
+
+/* Badge overlaid on thumbnail */
+.proj-badge-live {
+  position: absolute;
+  top: 12px; right: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 11px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  background: linear-gradient(135deg, #22d3ee, #06b6d4);
+  color: #0d1117;
+  box-shadow: 0 0 14px rgba(34,211,238,0.45);
+}
+
+.proj-badge-live::before {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #0d1117;
+  display: inline-block;
+  animation: liveBlink 1.4s ease-in-out infinite;
+}
+@keyframes liveBlink {
+  0%,100% { opacity: 1; }
+  50%      { opacity: 0.3; }
+}
+
+/* ── Body ── */
+.proj-body { padding: 18px 20px 20px; flex: 1; display: flex; flex-direction: column; }
+
+.proj-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+.proj-desc {
+  font-size: 13px;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  flex: 1;
+}
+
+.proj-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.proj-tag {
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 500;
+  background: rgba(34,211,238,0.07);
+  color: #67e8f9;
+  border: 1px solid rgba(34,211,238,0.18);
+}
+
+.proj-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.07);
+  margin-bottom: 14px;
+}
+
+.proj-links { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.proj-btn {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 7px 16px; border-radius: 8px;
+  font-size: 12px; font-weight: 600;
+  cursor: pointer; text-decoration: none;
+  transition: all 0.22s ease; border: none;
+}
+
+.proj-btn-live {
+  background: linear-gradient(135deg, #22d3ee, #06b6d4);
+  color: #0d1117;
+}
+.proj-btn-live:hover { opacity: 0.88; box-shadow: 0 0 14px rgba(34,211,238,0.4); }
+
+.proj-btn-gh {
+  background: rgba(167,139,250,0.1);
+  color: #c4b5fd;
+  border: 1px solid rgba(167,139,250,0.28);
+}
+.proj-btn-gh:hover { background: rgba(167,139,250,0.2); box-shadow: 0 0 12px rgba(167,139,250,0.2); }
+
+.proj-btn-ph {
+  background: rgba(100,116,139,0.15);
+  color: #94a3b8;
+  border: 1px solid rgba(100,116,139,0.25);
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+/* Github note under projects */
+.proj-github-note {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 6px;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+.proj-github-note a { color: #22d3ee; text-decoration: underline; }

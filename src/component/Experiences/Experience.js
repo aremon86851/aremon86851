@@ -1,98 +1,67 @@
 import React from "react";
 import Heading from "../Heading/Heading";
 import "./experience.css";
-const Experience = () => {
-  return (
-    <div className="pb-10" id="experience">
-      <Heading>Experience</Heading>
-      <div
-        style={{ background: "#373737", borderRadius: "12px" }}
-        className="card bg-base-100 shadow-xl text-left"
-        // data-aos="fade-right"
-      >
-        <div className="card-body text-white">
+
+const experiences = [
+  {
+    company: "CodeRower Software Pvt. Ltd.",
+    type: "Full-Time",
+    location: "Gurugram, India — Remote",
+    roles: [
+      {
+        title: "Software Engineer",
+        period: "Aug 2023 — Present",
+        note: "Build and maintain client-facing React/Next.js apps; integrate REST APIs with the backend team.",
+      },
+      {
+        title: "Frontend Developer",
+        period: "Jan 2023 — Jul 2023",
+        note: "Promoted to Software Engineer within 7 months.",
+      },
+    ],
+  },
+  {
+    company: "Freelance Web Developer",
+    type: "Self-Employed",
+    location: "Remote — BD, US, UK clients",
+    roles: [
+      {
+        title: "Web Developer",
+        period: "Mar 2022 — Dec 2022",
+        note: "Custom websites and e-commerce stores — WordPress/WooCommerce/Elementor; SSLCommerz and bKash payment integrations.",
+      },
+    ],
+  },
+];
+
+const Experience = () => (
+  <div id="experience" className="pb-6">
+    <Heading>Experience</Heading>
+
+    {experiences.map((exp, i) => (
+      <div key={i} className="exp-card">
+        <div className="exp-header">
           <div>
-            <h2 className="card-title text-white mb-1">
-              CodeRower Software Private Limited
-            </h2>
-            <h4 className="text-gray-400 text-sm">Full-Time</h4>
-            {/* <h4 className="text-gray-400 text-sm">Jan, 2023 - Present</h4> */}
-            <h4 className="text-gray-400 text-sm">
-              Gurugram, Haryana, India - Remote
-            </h4>
-          </div>
-          <div className="sm:pl-5 pl-3">
-            <ul className="steps steps-vertical">
-              <li className="step step-primary text-left">
-                <div className="mt-5 text-left">
-                  <span className="font-semibold">Software Engineer</span>
-                  <h4 className="text-gray-400 text-sm">Aug, 2023 - Present</h4>
-                </div>
-              </li>
-              <li className="step step-primary">
-                <div className="mt-5 text-left">
-                  <span className="font-semibold">Frontend developer</span>
-                  <h4 className="text-gray-400 text-sm">
-                    Jan, 2023 - Jul, 2023
-                  </h4>
-                </div>
-              </li>
-            </ul>
+            <h2 className="exp-company">{exp.company}</h2>
+            <div className="exp-meta">
+              <span className="exp-badge">{exp.type}</span>
+              <span className="exp-location">{exp.location}</span>
+            </div>
           </div>
         </div>
-      </div>
-      <div
-        style={{ background: "#373737", borderRadius: "12px" }}
-        className="card bg-base-100 shadow-xl text-left mt-5"
-        // data-aos="fade-left"
-      >
-        <div className="card-body text-white">
-          <div>
-            <h2 className="card-title text-white mb-1">Spyde Agency</h2>
-            <h4 className="text-gray-400 text-sm">Part-Time</h4>
-            {/* <h4 className="text-gray-400 text-sm">Jan, 2023 - Present</h4> */}
-            <h4 className="text-gray-400 text-sm">
-              Dhaka, Bangladesh - Remote
-            </h4>
-          </div>
-          <div className="sm:pl-5 pl-3">
-            <ul className="steps steps-vertical">
-              <li className="step step-primary text-left">
-                <div className="mt-5 text-left">
-                  <span className="font-semibold">Web developer</span>
-                  <h4 className="text-gray-400 text-sm">Jun, 2023 - Present</h4>
-                </div>
-              </li>
-            </ul>
-          </div>
+
+        <div className="exp-timeline">
+          {exp.roles.map((role, j) => (
+            <div key={j} className="exp-item">
+              <p className="exp-role">{role.title}</p>
+              <p className="exp-period">{role.period}</p>
+              {role.note && <p className="exp-note">{role.note}</p>}
+            </div>
+          ))}
         </div>
       </div>
-      <div
-        style={{ background: "#373737", borderRadius: "12px" }}
-        className="card bg-base-100 shadow-xl text-left mt-5"
-        // data-aos="fade-right"
-      >
-        <div className="card-body text-white">
-          <div>
-            <h2 className="card-title text-white mb-1">Freelancer</h2>
-            <h4 className="text-gray-400 text-sm">Full-Time</h4>
-          </div>
-          <div className="sm:pl-5 pl-3">
-            <ul className="steps steps-vertical">
-              <li className="step step-primary text-left">
-                <div className="mt-5 text-left">
-                  <span className="font-semibold text-left">Web developer</span>
-                  <h4 className="text-gray-400 text-sm">
-                    Mar, 2022 - Dec, 2022
-                  </h4>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+    ))}
+  </div>
+);
 
 export default Experience;

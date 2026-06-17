@@ -1,250 +1,136 @@
 import React from "react";
 import Heading from "../Heading/Heading";
-import img1 from "../../assest/luxury-hunt.png";
-import img2 from "../../assest/BoxStudio.png";
-import img3 from "../../assest/EduTech.png";
-import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
 import "./project.css";
 
-const Project = () => {
-  return (
-    <div className="my-10" id="projects">
-      <div>
-        <Heading>Projects...</Heading>
-        <p className="text-left mb-3 text-red-400 italic">For more you can check my github account. <a className="text-blue-400 underline" href="https://github.com/aremon86851?tab=repositories">Github</a></p>
-        <div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mx-2 md:mx-10 lg:mx-0">
-            <div
-              // data-aos="fade-right"
-              className="single-project bg-base-300 py-3 px-4 text-left rounded-tl-2xl rounded-br-2xl"
-            >
-              <div>
-                <PhotoProvider>
-                  <PhotoView src={img1}>
-                    <img
-                      className="object-cover h-52 w-full"
-                      src={img1}
-                      alt=""
-                    />
-                  </PhotoView>
-                </PhotoProvider>
-              </div>
-              <div>
-                <div className="flex flex-col w-full">
-                  <div className="flex md:justify-between md:items-center md:flex-row items-start flex-col justify-start py-2">
-                    <h2 className="text-3xl text-white font-semibold mt-3 mb-2">
-                      Luxury Hunt
-                    </h2>
-                    {/* <Link to="/luxury">
-                      <button className="btn btn-sm mr-2 text-white w-full">
-                        View details
-                      </button>
-                    </Link> */}
-                  </div>
-                  <div className="flex justify-end">
-                    <p className="text-right italic w-80">
-                      <span className="badge text-white mr-2">Reactjs</span>
-                      <span className="badge text-white mr-2">Javascript</span>
-                      <span className="badge text-white mr-2">XML</span>
-                      <span className="badge text-white mr-2">Tailwind</span>
-                      <span className="badge text-white mr-2">Css</span>
-                      <span className="badge text-white mr-2">Html</span>
-                      <span className="badge text-white mr-2">Firebase</span>
-                    </p>
-                  </div>
-                  <div className="divider mt-2 mb-0"></div>
-                  <div className="mt-2 flex md:justify-end justify-start pb-2">
-                    <div className="md:block flex flex-col gap-2 w-full">
-                      <span>
-                        <a href="https://luxury-hunt.web.app/" target="_blank">
-                          <button className="btn btn-xs bg-primary mr-2 text-white  md:mb-2 mb-0 md:w-28 w-full">
-                            Live Demo
-                          </button>
-                        </a>
-                      </span>
-                      <span>
-                        <a
-                          href="https://github.com/aremon86851/Luxury-Hunt"
-                          target="_blank"
-                        >
-                          <button className="btn btn-xs bg-secondary mr-2 text-white  md:mb-2 mb-0 md:w-28 w-full">
-                            Client Github
-                          </button>
-                        </a>
-                      </span>
-                      <span>
-                        <a
-                          href="https://github.com/aremon86851/Luxury-Hunt-Server"
-                          target="_blank"
-                        >
-                          <button className="btn btn-xs bg-accent text-black mr-2 hover:text-white  md:mb-2 mb-0 md:w-28 w-full">
-                            Server Github
-                          </button>
-                        </a>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              // data-aos="fade-up-right"
-              className="single-project bg-base-300 py-3 px-4 text-left rounded-tl-2xl rounded-br-2xl"
-            >
-              <div>
-                <PhotoProvider>
-                  <PhotoView src={img2}>
-                    <img
-                      className="object-cover h-52 w-full"
-                      src={img2}
-                      alt=""
-                    />
-                  </PhotoView>
-                </PhotoProvider>
-              </div>
-              <div>
-                <div className="flex flex-col w-full">
-                  <div className="flex md:justify-between md:items-center md:flex-row items-start flex-col justify-start py-2">
-                    <h2 className="text-3xl text-white font-semibold mt-3 mb-2">
-                      Box Studio
-                    </h2>
-                    {/* <Link to="/boxstudio">
-                      <button className="btn btn-sm mr-2 text-white">
-                        View details
-                      </button>
-                    </Link> */}
-                  </div>
-                  <div className="flex justify-end">
-                    <p className="text-right italic w-80">
-                      <span className="badge text-white mr-2">Reactjs</span>
-                      <span className="badge text-white mr-2">Javascript</span>
-                      <span className="badge text-white mr-2">XML</span>
-                      <span className="badge text-white mr-2">Tailwind</span>
-                      <span className="badge text-white mr-2">Css</span>
-                      <span className="badge text-white mr-2">Html</span>
-                      <span className="badge text-white mr-2">Firebase</span>
-                    </p>
-                  </div>
-                  <div className="divider mt-2 mb-0"></div>
-                  <div className="mt-2 flex md:justify-end justify-start pb-2">
-                    <div className="md:block flex flex-col gap-2 w-full">
-                      <span>
-                        <a
-                          href="https://assignment11-3419d.web.app/"
-                          target="_blank"
-                        >
-                          <button className="btn btn-xs bg-primary mr-2 text-white  md:mb-2 mb-0 md:w-28 w-full">
-                            Live Demo
-                          </button>
-                        </a>
-                      </span>
-                      <span>
-                        <a
-                          href="https://github.com/aremon86851/box-studio"
-                          target="_blank"
-                        >
-                          <button className="btn btn-xs bg-secondary mr-2 text-white  md:mb-2 mb-0 md:w-28 w-full">
-                            Client Github
-                          </button>
-                        </a>
-                      </span>
-                      <span>
-                        <a
-                          href="https://github.com/aremon86851/box-studio-server"
-                          target="_blank"
-                        >
-                          <button className="btn btn-xs bg-accent text-black mr-2 hover:text-white  md:mb-2 mb-0 md:w-28 w-full">
-                            Server Github
-                          </button>
-                        </a>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              // data-aos="fade-left"
-              className="single-project bg-base-300 py-3 px-4 text-left rounded-tl-2xl rounded-br-2xl"
-            >
-              <div>
-                <PhotoProvider>
-                  <PhotoView src={`${img3}`}>
-                    <img
-                      className="object-cover h-52 w-full"
-                      src={img3}
-                      alt=""
-                    />
-                  </PhotoView>
-                </PhotoProvider>
-              </div>
-              <div>
-                <div className="flex flex-col w-full">
-                  <div className="flex md:justify-between md:items-center md:flex-row items-start flex-col justify-start py-2">
-                    <h2 className="text-3xl text-white font-semibold mt-3 mb-2">
-                      Edu tech
-                    </h2>
-                    {/* <Link to="/edutech">
-                      <button className="btn btn-sm mr-2 text-white">
-                        View details
-                      </button>
-                    </Link> */}
-                  </div>
-                  <div className="flex justify-end">
-                    <p className="text-right italic w-80">
-                      <span className="badge text-white mr-2">Reactjs</span>
-                      <span className="badge text-white mr-2">Javascript</span>
-                      <span className="badge text-white mr-2">XML</span>
-                      <span className="badge text-white mr-2">Tailwind</span>
-                      <span className="badge text-white mr-2">Css</span>
-                      <span className="badge text-white mr-2">Html</span>
-                      <span className="badge text-white mr-2">Firebase</span>
-                    </p>
-                  </div>
-                  <div className="divider mt-2 mb-0"></div>
-                  <div className="mt-2 flex md:justify-end justify-start pb-2">
-                    <div className="md:block flex flex-col gap-2  w-full">
-                      <span>
-                        <a
-                          href="https://assignment-10-e55e6.web.app/"
-                          target="_blank"
-                        >
-                          <button className="btn btn-xs bg-primary mr-2  text-white md:mb-2 mb-0 md:w-28 w-full">
-                            Live Demo
-                          </button>
-                        </a>
-                      </span>
-                      <span>
-                        <a
-                          href="https://github.com/aremon86851/edu-tech"
-                          target="_blank"
-                        >
-                          <button className="btn btn-xs bg-secondary mr-2 md:mb-2 mb-0 text-white md:w-28 w-full">
-                            Client Github
-                          </button>
-                        </a>
-                      </span>
-                      <span>
-                        <a
-                          href="https://github.com/aremon86851/edu-tech-server"
-                          target="_blank"
-                        >
-                          <button className="btn btn-xs bg-accent text-black mr-2 hover md:mb-2 mb-0:text-white md:w-28 w-full">
-                            Server Github
-                          </button>
-                        </a>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+/* ─── Project data ─────────────────────────────────────────── */
+const featured = {
+  title: "Scanalyzr",
+  isLive: true,
+  desc: "QR code analytics platform — real-time scan tracking with location, device, and timestamp data. Freemium SaaS with a live analytics dashboard.",
+  tags: ["React", "Node.js", "Express", "MongoDB", "REST API", "JWT"],
+  live: "https://scanalyzr.com",
+  github: null,
+  gradient: "linear-gradient(135deg, #0f2027, #203a43, #2c5364)",
+  initial: "S",
+  initialColor: "#22d3ee",
+};
+
+const projects = [
+  {
+    title: "HisabKhata",
+    isLive: false,
+    desc: "Baki/credit management app for Bangladeshi shopkeepers — community-sourced fraud detection, Bengali UI, freemium model.",
+    tags: ["React", "Node.js", "MongoDB", "REST API"],
+    live: null,
+    github: null,
+    gradient: "linear-gradient(135deg, #1a0533, #2d1b69, #11044e)",
+    initial: "HK",
+    initialColor: "#a78bfa",
+  },
+  {
+    title: "University Management",
+    isLive: false,
+    desc: "Role-based academic backend — students, faculty, courses with permissions middleware and auto-ID generation.",
+    tags: ["Node.js", "Express", "MongoDB", "Mongoose", "JWT"],
+    live: null,
+    github: "https://github.com/aremon86851",
+    gradient: "linear-gradient(135deg, #0a2818, #14532d, #052e16)",
+    initial: "UMS",
+    initialColor: "#34d399",
+  },
+];
+
+/* ─── Reusable components ──────────────────────────────────── */
+const Tags = ({ tags }) => (
+  <div className="proj-tags">
+    {tags.map((t) => <span key={t} className="proj-tag">{t}</span>)}
+  </div>
+);
+
+const FeaturedCard = ({ p }) => (
+  <div className="proj-card proj-card-featured mb-6">
+    {/* Gradient placeholder thumbnail */}
+    <div className="proj-thumb-wrapper" style={{ position: "relative" }}>
+      <div
+        className="proj-thumb-placeholder"
+        style={{ background: p.gradient, color: p.initialColor }}
+      >
+        {p.initial}
+      </div>
+      {p.isLive && <span className="proj-badge-live">LIVE</span>}
+    </div>
+
+    <div className="proj-body">
+      <h2 className="proj-title">{p.title}</h2>
+      <p className="proj-desc">{p.desc}</p>
+      <Tags tags={p.tags} />
+      <div className="proj-divider" />
+      <div className="proj-links">
+        {p.live && (
+          <a href={p.live} target="_blank" rel="noreferrer" className="proj-btn proj-btn-live">↗ Visit Site</a>
+        )}
+        {p.github
+          ? <a href={p.github} target="_blank" rel="noreferrer" className="proj-btn proj-btn-gh">GitHub</a>
+          : <span className="proj-btn proj-btn-ph">Private Repo</span>
+        }
       </div>
     </div>
-  );
-};
+  </div>
+);
+
+const ProjectCard = ({ p }) => (
+  <div className="proj-card">
+    <div className="proj-thumb-wrapper" style={{ position: "relative" }}>
+      <div
+        className="proj-thumb-placeholder"
+        style={{ background: p.gradient, color: p.initialColor }}
+      >
+        {p.initial}
+      </div>
+      {p.isLive && <span className="proj-badge-live">LIVE</span>}
+    </div>
+
+    <div className="proj-body">
+      <h2 className="proj-title">{p.title}</h2>
+      <p className="proj-desc">{p.desc}</p>
+      <Tags tags={p.tags} />
+      <div className="proj-divider" />
+      <div className="proj-links">
+        {p.live
+          ? <a href={p.live} target="_blank" rel="noreferrer" className="proj-btn proj-btn-live">↗ Live Demo</a>
+          : <span className="proj-btn proj-btn-ph" title="Coming soon">No Demo Yet</span>
+        }
+        {p.github
+          ? <a href={p.github} target="_blank" rel="noreferrer" className="proj-btn proj-btn-gh">GitHub</a>
+          : <span className="proj-btn proj-btn-ph">Private Repo</span>
+        }
+      </div>
+    </div>
+  </div>
+);
+
+/* ─── Main export ──────────────────────────────────────────── */
+const Project = () => (
+  <div id="projects" className="my-2 pb-6">
+    <Heading>Projects</Heading>
+
+    <p className="proj-github-note">
+      More on{" "}
+      <a href="https://github.com/aremon86851?tab=repositories" target="_blank" rel="noreferrer">
+        my GitHub
+      </a>
+      . Private repos available on request.
+    </p>
+
+    {/* Featured */}
+    <FeaturedCard p={featured} />
+
+    {/* Grid */}
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+      {projects.map((p) => <ProjectCard key={p.title} p={p} />)}
+    </div>
+  </div>
+);
 
 export default Project;
