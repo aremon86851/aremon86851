@@ -57,7 +57,7 @@ const Banner = () => {
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://drive.google.com/file/d/1pykTYwl7exOiLEuVi539xsQ0p407r4u2/view?usp=sharing"
+              href="https://drive.google.com/file/d/1FKeZF8DpstT1p4kkJOgiAXDXNrUpOYkV/view?usp=sharing"
               className="btn-hero-preview"
             >
               Preview Resume
