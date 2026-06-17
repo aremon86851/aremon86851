@@ -10,7 +10,7 @@ import bootstrapIcon from "../../assest/bootstrap.png";
 import nodejsIcon from "../../assest/nodejs.png";
 import expressIcon from "../../assest/express.png";
 import mongodbIcon from "../../assest/mongodb.png";
-import firebaseIcon from "../../assest/ant-design.png";
+// import firebaseIcon from "../../assest/ant-design.png";
 import wordpressIcon from "../../assest/wordpress.png";
 import woocommerceIcon from "../../assest/woocommerce.png";
 import elementorIcon from "../../assest/elementor.png";
