@@ -7,7 +7,7 @@ import "./project.css";
 const featured = {
   title: "Scanalyzr",
   isLive: true,
-  desc: "QR code analytics platform — real-time scan tracking with location, device, and timestamp data. Freemium SaaS with a live analytics dashboard.",
+  desc: "QR code analytics platform - real-time scan tracking with location, device, and timestamp data. Freemium SaaS with a live analytics dashboard.",
   tags: ["React", "Node.js", "Express", "MongoDB", "REST API", "JWT"],
   live: "https://scanalyzr.com",
   github: null,
@@ -20,7 +20,7 @@ const projects = [
   {
     title: "HisabKhata",
     isLive: false,
-    desc: "Baki/credit management app for Bangladeshi shopkeepers — community-sourced fraud detection, Bengali UI, freemium model.",
+    desc: "Baki/credit management app for Bangladeshi shopkeepers - community-sourced fraud detection, Bengali UI, freemium model.",
     tags: ["React", "Node.js", "MongoDB", "REST API"],
     live: null,
     github: null,
@@ -31,13 +31,24 @@ const projects = [
   {
     title: "University Management",
     isLive: false,
-    desc: "Role-based academic backend — students, faculty, courses with permissions middleware and auto-ID generation.",
+    desc: "Role-based academic backend - students, faculty, courses with permissions middleware and auto-ID generation.",
     tags: ["Node.js", "Express", "MongoDB", "Mongoose", "JWT"],
     live: null,
     github: "https://github.com/aremon86851",
     gradient: "linear-gradient(135deg, #0a2818, #14532d, #052e16)",
     initial: "UMS",
     initialColor: "#34d399",
+  },
+  {
+    title: "Satheiro",
+    isLive: true,
+    desc: "Emergency and nearby service finder for Bangladesh - connect users with doctors, electricians, plumbers, and local providers with one tap, powered by real-time location.",
+    tags: ["React Native", "Expo", "Next.js", "Node.js", "Express", "PostgreSQL", "Prisma", "Firebase", "TypeScript"],
+    live: "https://satheiro-be.vercel.app",
+    github: null,
+    gradient: "linear-gradient(135deg, #0a2e1a, #1a6b45, #2e9e6b)",
+    initial: "ST",
+    initialColor: "#6ee7b7",
   },
 ];
 
