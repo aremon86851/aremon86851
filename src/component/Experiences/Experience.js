@@ -6,16 +6,16 @@ const experiences = [
   {
     company: "CodeRower Software Pvt. Ltd.",
     type: "Full-Time",
-    location: "Gurugram, India — Remote",
+    location: "Gurugram, India - Remote",
     roles: [
       {
         title: "Software Engineer",
-        period: "Aug 2023 — Present",
+        period: "Aug 2023 - Present",
         note: "Build and maintain client-facing React/Next.js apps; integrate REST APIs with the backend team.",
       },
       {
         title: "Frontend Developer",
-        period: "Jan 2023 — Jul 2023",
+        period: "Jan 2023 - Jul 2023",
         note: "Promoted to Software Engineer within 7 months.",
       },
     ],
@@ -23,12 +23,12 @@ const experiences = [
   {
     company: "Freelance Web Developer",
     type: "Self-Employed",
-    location: "Remote — BD, US, UK clients",
+    location: "Remote - BD, US, UK clients",
     roles: [
       {
         title: "Web Developer",
-        period: "Mar 2022 — Dec 2022",
-        note: "Custom websites and e-commerce stores — WordPress/WooCommerce/Elementor; SSLCommerz and bKash payment integrations.",
+        period: "Mar 2022 - Dec 2022",
+        note: "Custom websites and e-commerce stores - WordPress/WooCommerce/Elementor; SSLCommerz and bKash payment integrations.",
       },
     ],
   },

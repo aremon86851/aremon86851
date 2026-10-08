@@ -2,55 +2,78 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── Design tokens ── */
 :root {
-  --cyan:   #22d3ee;
-  --purple: #a78bfa;
-  --pink:   #f472b6;
-  --bg:     #0d1117;
-  --bg-card: rgba(255,255,255,0.04);
-  --border:  rgba(255,255,255,0.08);
+  --bg:          #0A0A0A;
+  --surface:     #111111;
+  --surface-2:   #161616;
+  --frame:       #0D0D0D;
+  --frame-2:     #141414;
+  --border:      #1F1F1F;
+  --border-card: #232323;
+  --border-chip: #2A2A2A;
+  --border-btn:  #333333;
+  --text:        #EDEDED;
+  --text-2:      #CFCFCF;
+  --text-3:      #BDBDBD;
+  --muted:       #9A9A9A;
+  --subtle:      #7E7E7E;
+  --footer:      #6E6E6E;
+  --accent:      #F5A524;
+
+  --content-max: 1200px;
+  --content-px:  clamp(20px, 5vw, 64px);
+  --section-py:  clamp(40px, 6vw, 80px);
 }
 
-* { box-sizing: border-box; }
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+  font-family: 'Geist', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  background-image: none;
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.55;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #0d1117;
-  background-image: url("/src/assest/background.avif");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  color: #e2e8f0;
-  font-weight: 400;
-  text-align: left;
 }
 
-h1 { font-size: 32px; }
-h2 { font-size: 24px; }
-h3 { font-size: 18.72px; }
-h4 { font-size: 16px; }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+/* ── Layout helpers ── */
+.site-container {
+  max-width: var(--content-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--content-px);
+  padding-right: var(--content-px);
 }
 
-/* Reusable utilities */
-.gradient-text {
-  background: linear-gradient(135deg, var(--cyan), var(--purple));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.section-border { border-top: 1px solid var(--border); }
+
+.section-py {
+  padding-top: var(--section-py);
+  padding-bottom: var(--section-py);
 }
 
-.glass {
-  background: var(--bg-card);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid var(--border);
+/* ── Accessibility ── */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
 }

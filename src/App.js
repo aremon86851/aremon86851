@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Main from './layout/Main';
@@ -7,7 +6,6 @@ import LuxuryHunt from './component/ProjectsDetails/LuxuryHunt';
 import BoxStudio from './component/ProjectsDetails/BoxStudio';
 import EduTech from './component/ProjectsDetails/EduTech';
 import Dashboard from './Page/Dashboard/Dashboard';
-import Projects from './layout/Projects';
 import New from './Page/New/New';
 
 

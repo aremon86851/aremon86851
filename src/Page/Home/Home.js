@@ -1,16 +1,20 @@
-import React from "react";
-import Banner from "../../component/Banner/Banner";
-import Footer from "../../component/Footer/Footer";
-import CommonComponent from "../../component/CommonComponent/CommonComponent";
+import React from 'react';
+import Hero from '../../component/Hero/Hero';
+import Work from '../../component/Work/Work';
+import ExperienceSection from '../../component/ExperienceSection/ExperienceSection';
+import StackSection from '../../component/StackSection/StackSection';
+import ContactSection from '../../component/Contact/ContactSection';
+import Footer from '../../component/Footer/Footer';
 
 const Home = () => (
-  <>
-    <div className="max-w-[1440px] mx-auto">
-      <Banner />
-      <CommonComponent />
-    </div>
+  <main>
+    <Hero />
+    <Work />
+    <ExperienceSection />
+    <StackSection />
+    <ContactSection />
     <Footer />
-  </>
+  </main>
 );
 
 export default Home;

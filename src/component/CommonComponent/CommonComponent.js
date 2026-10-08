@@ -47,7 +47,7 @@ const CommonComponent = () => {
         {/* ── Sidebar ── */}
         <div className="flex-shrink-0">
 
-          {/* Welcome card — always visible */}
+          {/* Welcome card - always visible */}
           <div style={{ ...glass, padding: "20px", marginBottom: "14px" }} className="xl:w-80 lg:w-72 md:mx-0 mx-4">
             <p style={{ color: "#e2e8f0", fontSize: "13px", fontWeight: 500, textAlign: "center", marginBottom: "14px" }}>
               Hey, Welcome to my portfolio 🖐
@@ -60,14 +60,14 @@ const CommonComponent = () => {
                 Based in <span style={{ color: "#94a3b8" }}>Gazipur, Bangladesh</span>.
               </p>
             </div>
-            {/* Contact — mobile only */}
+            {/* Contact - mobile only */}
             <div className="lg:hidden block" style={{ borderTop: "1px solid rgba(255,255,255,0.07)", marginTop: "14px", paddingTop: "12px" }}>
               <Label text="Contact" />
               <Contact />
             </div>
           </div>
 
-          {/* Sticky nav — desktop only */}
+          {/* Sticky nav - desktop only */}
           <div
             style={{ ...glass, padding: "20px", position: "sticky", top: "12px" }}
             className="xl:w-80 lg:w-72 lg:flex flex-col justify-between hidden"

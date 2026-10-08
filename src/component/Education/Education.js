@@ -7,7 +7,7 @@ const educations = [
     icon: "🎓",
     degree: "B.Sc. in Computer Science & Engineering",
     institution: "Atish Dipankar University of Science and Technology",
-    period: "Jul 2024 — 2028 (Ongoing)",
+    period: "Jul 2024 - 2028 (Ongoing)",
     status: "In Progress",
     gpa: null,
   },

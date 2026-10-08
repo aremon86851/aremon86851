@@ -1,33 +1,42 @@
-import React from "react";
+import React from 'react';
+import { site } from '../../content/site';
 
-const Footer = () => (
-  <footer
-    style={{
-      textAlign: "center",
-      padding: "20px 16px",
-      marginTop: "8px",
-      background: "rgba(255,255,255,0.02)",
-      borderTop: "1px solid rgba(255,255,255,0.06)",
-      color: "#475569",
-      fontSize: "13px",
-    }}
-  >
-    <p>
-      © 2024{" "}
-      <span
+const Footer = () => {
+  const { footer } = site;
+
+  return (
+    <footer style={{ borderTop: '1px solid var(--border)', paddingTop: 24, paddingBottom: 24 }}>
+      <div
+        className="site-container"
         style={{
-          background: "linear-gradient(135deg, #22d3ee, #a78bfa)",
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
-          backgroundClip: "text",
-          fontWeight: 600,
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          flexWrap: 'wrap',
+          gap: 8,
         }}
       >
-        Abdur Rahman Emon
-      </span>
-      {" "}— All rights reserved.
-    </p>
-  </footer>
-);
+        <span
+          style={{
+            fontFamily: "'Geist Mono', monospace",
+            fontSize: 12,
+            color: 'var(--footer)',
+          }}
+        >
+          {footer.copy}
+        </span>
+        <span
+          style={{
+            fontFamily: "'Geist Mono', monospace",
+            fontSize: 12,
+            color: 'var(--footer)',
+          }}
+        >
+          {footer.location}
+        </span>
+      </div>
+    </footer>
+  );
+};
 
 export default Footer;
