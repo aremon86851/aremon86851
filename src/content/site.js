@@ -26,7 +26,7 @@ export const site = {
       secondary: { label: 'Download CV', tag: 'PDF', href: '/resume_aremon.pdf' },
     },
     location: 'Gazipur, BD · GMT+6',
-    photo: '/images/emon.jpg',
+    photo: '/images/profile-picture.png',
   },
 
   work: {
