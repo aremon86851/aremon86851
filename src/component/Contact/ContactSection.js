@@ -3,6 +3,7 @@ import { site } from '../../content/site';
 
 const ContactLink = ({ href, label, icon }) => {
   const [h, setH] = useState(false);
+
   return (
     <a
       href={href}

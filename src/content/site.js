@@ -52,7 +52,7 @@ export const site = {
         name: 'Satheiro',
         links: [
           { label: 'satheiro.com ↗', href: 'https://satheiro.com' },
-          { label: 'Google Play ↗', href: '#' },
+          { label: 'Google Play ↗', href: 'https://play.google.com/store/apps/details?id=com.satheiro.app&pcampaignid=web_share', external: true },
         ],
         problem:
           'Finding a trustworthy local service provider in Bangladesh still runs on word of mouth.',

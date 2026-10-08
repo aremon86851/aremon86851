@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { site } from '../../content/site';
+import { useDrawer } from '../Drawer/DrawerContext';
 
 const BrowserFrame = ({ url, screenshot, screenshotAlt, phoneScreenshot }) => (
   <div
@@ -264,13 +265,23 @@ const Block = ({ label, text }) => (
   </div>
 );
 
-const LinkChip = ({ href, label }) => {
+const LinkChip = ({ href, label, external }) => {
   const [h, setH] = useState(false);
+  const { openDrawer } = useDrawer();
+
+  const handleClick = (e) => {
+    if (!external && href && href !== '#') {
+      e.preventDefault();
+      openDrawer(href, label);
+    }
+  };
+
   return (
     <a
       href={href}
-      target="_blank"
-      rel="noopener noreferrer"
+      onClick={handleClick}
+      target={external ? '_blank' : undefined}
+      rel={external ? 'noopener noreferrer' : undefined}
       style={{
         fontFamily: "'Geist Mono', monospace",
         fontSize: 12,
@@ -281,6 +292,7 @@ const LinkChip = ({ href, label }) => {
         textDecoration: 'none',
         whiteSpace: 'nowrap',
         transition: 'border-color .15s, color .15s',
+        cursor: 'pointer',
       }}
       onMouseEnter={() => setH(true)}
       onMouseLeave={() => setH(false)}
